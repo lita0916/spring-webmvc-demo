@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ThymeleafController {
     @RequestMapping({"/", "/thymeleaf"})
     public String thymeleaf(Model model) {
+        model.addAttribute("title","标题");
+        model.addAttribute("num","数字");
         return "hello.html";
     }
 
