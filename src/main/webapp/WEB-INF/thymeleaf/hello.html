@@ -1,43 +1,33 @@
 <!DOCTYPE html>
-
 <html>
-
-<head>
-    <title>Thymeleaf Sandbox: Spring Reactive</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-</head>
-
-<body>
-
-<h2>Spring Reactive - Thymeleaf Sandbox application</h2>
-
-<p>Using template engine: <strong>Thymeleaf</strong></p>
-
-<p><span>Current time is [[${#dates.createNow()}]]</span></p>
-
-<p>
-    Some URLs:
-</p>
-
-<ul>
-    <li>Thymeleaf:
+    <head>
+        <title>Thymeleaf Sandbox: Spring Reactive</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link data-th-href="@{/resources/form.css}" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" data-th-src="@{/resources/jquery/1.6/jquery.js}" ></script>
+    </head>
+    <body>
+        <h2>Spring Reactive - Thymeleaf Sandbox application</h2>
+        <p>Using template engine: <strong>Thymeleaf</strong></p>
+        <p><span>Current time is [[${#dates.createNow()}]]</span></p>
+        <p>
+            Some URLs:
+        </p>
         <ul>
-            <li><a data-th-href="@{thymeleaf}">Index</a></li>
-            <li><a data-th-href="@{smalllist.thymeleaf}">Small List</a></li>
-            <li><a data-th-href="@{biglist-normal.thymeleaf}">Big List in NORMAL mode</a></li>
-            <li><a data-th-href="@{biglist-buffered.thymeleaf}">Big List in BUFFERED mode</a></li>
-            <li><a data-th-href="@{biglist-datadriven.thymeleaf}">Big List in DATA-DRIVEN mode</a></li>
+            <li>Thymeleaf:
+                <ul>
+                    <li><a data-th-href="@{thymeleaf}">Index</a></li>
+                    <li><span data-th-text="${title}">Index</span></li>
+                    <li><span data-th-text="${num}">Index</span></li>
+                </ul>
+            </li>
+            <li>FreeMarker:
+                <ul>
+                    <li><a data-th-href="@{freemarker}">Index</a></li>
+                    <li><a data-th-href="@{smalllist.freemarker}">Small List</a></li>
+                    <li><a data-th-href="@{biglist.freemarker}">Big List (in NORMAL mode &mdash; no other available)</a></li>
+                </ul>
+            </li>
         </ul>
-    </li>
-    <li>FreeMarker:
-        <ul>
-            <li><a data-th-href="@{freemarker}">Index</a></li>
-            <li><a data-th-href="@{smalllist.freemarker}">Small List</a></li>
-            <li><a data-th-href="@{biglist.freemarker}">Big List (in NORMAL mode &mdash; no other available)</a></li>
-        </ul>
-    </li>
-</ul>
-
-</body>
-
+    </body>
 </html>
