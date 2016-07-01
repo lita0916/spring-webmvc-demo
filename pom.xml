@@ -9,6 +9,7 @@
     <url>http://maven.apache.org</url>
     <properties>
         <spring.version>4.2.5.RELEASE</spring.version>
+        <springframework.version>4.3.0.RC1</springframework.version>
         <freemarker.version>2.3.23</freemarker.version>
         <thymeleaf.version>3.0.0.RELEASE</thymeleaf.version>
         <org.slf4j-version>1.7.12</org.slf4j-version>
@@ -20,7 +21,6 @@
             <artifactId>spring-webmvc</artifactId>
             <version>${spring.version}</version>
         </dependency>
-
 
         <!-- jsp -->
         <dependency>
@@ -53,6 +53,13 @@
             <groupId>org.freemarker</groupId>
             <artifactId>freemarker</artifactId>
             <version>${freemarker.version}</version>
+        </dependency>
+
+        <dependency>
+            <!-- Needed only for the FreemarkerConfigurer -->
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${springframework.version}</version>
         </dependency>
 
         <dependency>
